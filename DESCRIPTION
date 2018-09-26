@@ -1,0 +1,16 @@
+Package: iClusterPlusUtils
+Title: Utils for Integrative clustering of multi-type genomic data
+Version: 1.16.0
+Date: 2018-04-06
+Depends: R (>= 3.3.0), parallel
+Suggests: RUnit, BiocGenerics
+Author: Traynor, Carlos
+Maintainer: Carlos Traynor <c.traynor@warwick.ac.uk>
+Description: Integrative clustering of multiple genomic data using a
+        joint latent variable model
+LazyData: yes
+License: GPL (>= 2)
+biocViews: Microarray, Clustering
+NeedsCompilation: yes
+Packaged: 2018-04-30 23:55:37 UTC; biocbuild
+RoxygenNote: 6.0.1
