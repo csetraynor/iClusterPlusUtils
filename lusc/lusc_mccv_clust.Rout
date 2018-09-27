@@ -1,0 +1,184 @@
+
+R version 3.5.1 (2018-07-02) -- "Feather Spray"
+Copyright (C) 2018 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+Microsoft R Open 3.5.1
+The enhanced R distribution from Microsoft
+Microsoft packages Copyright (C) 2018 Microsoft Corporation
+
+Using the Intel MKL for parallel mathematical computing (using 32 cores).
+
+Default CRAN mirror snapshot taken on 2018-08-01.
+See: https://mran.microsoft.com/.
+
+> #mc-cross-validation.R
+> # Load libraries
+> suppressMessages(library(dplyr))
+> # For glmnet
+> suppressMessages(library(glmnet))
+> suppressMessages(library(glmnetUtils))
+> # For iCluster
+> library(iClusterPlus)
+Loading required package: parallel
+> library(GenomicRanges)
+Loading required package: BiocGenerics
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:parallel’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parLapplyLB, parRapply, parSapply, parSapplyLB
+
+The following objects are masked from ‘package:dplyr’:
+
+    combine, intersect, setdiff, union
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, append, as.data.frame, cbind, colnames, do.call,
+    duplicated, eval, evalq, Filter, Find, get, grep, grepl, intersect,
+    is.unsorted, lapply, lengths, Map, mapply, match, mget, order,
+    paste, pmax, pmax.int, pmin, pmin.int, Position, rank, rbind,
+    Reduce, rownames, sapply, setdiff, sort, table, tapply, union,
+    unique, unsplit
+
+Loading required package: S4Vectors
+Loading required package: stats4
+
+Attaching package: ‘S4Vectors’
+
+The following object is masked from ‘package:dplyr’:
+
+    rename
+
+Loading required package: IRanges
+
+Attaching package: ‘IRanges’
+
+The following object is masked from ‘package:Matrix’:
+
+    expand
+
+The following objects are masked from ‘package:dplyr’:
+
+    collapse, desc, slice
+
+Loading required package: GenomeInfoDb
+> library(gplots)
+
+Attaching package: ‘gplots’
+
+The following object is masked from ‘package:IRanges’:
+
+    space
+
+The following object is masked from ‘package:stats’:
+
+    lowess
+
+> library(lattice)
+> # For survival analysis
+> library(survival)
+> library(survcomp)
+Loading required package: prodlim
+> # For MC-crossvalidations
+> suppressMessages(library(rsample))
+> suppressMessages(library(tidyposterior))
+> # for this package
+> #Read arguments listed on command line
+> args = (commandArgs(TRUE))
+> i = as.integer(args[1]) 
+> print(i)
+[1] 14
+> set.seed(69837693)
+> 
+> ## Load genomic datasets
+> gene = readRDS("~/iClusterPlus/data/gene.RDS")
+> seg.cn = readRDS("~/iClusterPlus/data/seg.cn.RDS")
+> meth450 = readRDS("~/iClusterPlus/data/meth450.RDS")
+> sample = readRDS("~/iClusterPlus/data/sample.RDS")
+> ## Get common sample id
+> sample_id <- list(rownames(gene$matrix), rownames(seg.cn), sample$sample_id, 
++                   rownames(meth450$matrix))
+> sample_id <- Reduce(intersect, sample_id)
+> 
+> ## Filter
+> filter_sample_id <- function(s, m){
++   m[rownames(m) %in% s, ]
++ }
+> gene$matrix <- filter_sample_id(s = sample_id, m = gene$matrix)
+> meth450$matrix <- filter_sample_id(s = sample_id, m = meth450$matrix)
+> seg.cn <- filter_sample_id(s = sample_id, m = seg.cn)
+> sample <- sample[sample$sample_id %in% sample_id, ]
+> sample <- sample[order(sample$sample_id), ]
+> 
+> require(assertthat)
+Loading required package: assertthat
+> assert_that(all(rownames(meth450$matrix) == rownames(seg.cn)))
+[1] TRUE
+> assert_that(all(rownames(gene$matrix) == rownames(seg.cn)))
+[1] TRUE
+> ## Select sigfeatures
+> 
+> # get clinical data -----
+> lusc_mccv <- readRDS("~/iClusterPlusUtils/data/mc_lusc_clinical.RDS")
+> vfold <- lusc_mccv$splits[[i]] #choose splits
+> train_id <- vfold$in_id
+> date()
+[1] "Thu Sep 27 11:21:45 2018"
+> ### --- Conduct integrative Clustering
+> set.seed(321)
+> model.tuned <- iClusterPlus::tune.iClusterBayes(cpus = 28,
++                                                 dt1 = gene$matrix[train_id, ],
++                                                 dt2 = seg.cn[train_id, ],
++                                                 dt3 = meth450$matrix[train_id, ],
++                                                 type = c("gaussian","gaussian", "gaussian"),
++                                                 K= 1:8,
++                                                 n.burnin=1000,
++                                                 n.draw=1200,
++                                                 prior.gamma = rep(0.1, 9),
++                                                 sdev = 0.5,
++                                                 beta.var.scale = 1,
++                                                 thin = 1,
++                                                 pp.cutoff = 0.5)
+Begin parallel computation
+End parallel computation
+> date()
+[1] "Thu Sep 27 11:21:41 2018"
+> ## Model selection
+> nK = length(model.tuned$fit)
+> 
+> ## get the optimal k+1 or g cluster model
+> m.BIC <- sapply(model.tuned$fit, function(m){
++   m$BIC
++ })
+> k = which.min(m.BIC)
+Error in which.min(m.BIC) : 
+  (list) object cannot be coerced to type 'double'
+Calls: which.min -> which.min
+Execution halted
+
+ *** caught bus error ***
+address 0x7f332f2b73f0, cause 'non-existent physical address'
+An irrecoverable exception occurred. R is aborting now ...
