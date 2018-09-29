@@ -14,7 +14,6 @@ library(survival)
 library(survcomp)
 # For MC-crossvalidations
 suppressMessages(library(rsample))
-suppressMessages(library(tidyposterior))
 # for this package
 #Read arguments listed on command line
 args = (commandArgs(TRUE))
