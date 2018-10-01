@@ -1,0 +1,8 @@
+Seq	Host	Starttime	JobRuntime	Send	Receive	Exitval	Signal	Command
+14	:	1538342206.759	     0.016	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 14' lusc_mccv_clust8.R
+1	:	1538342203.983	     2.974	0	0	143	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 1' lusc_mccv_clust8.R
+15	:	1538342206.960	     0.017	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 15' lusc_mccv_clust8.R
+9	:	1538342205.698	     1.282	0	0	143	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 9' lusc_mccv_clust8.R
+6	:	1538342205.038	     1.965	0	0	143	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 6' lusc_mccv_clust8.R
+4	:	1538342204.606	     2.422	0	0	143	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 4' lusc_mccv_clust8.R
+3	:	1538342204.396	     2.650	0	0	143	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 3' lusc_mccv_clust8.R

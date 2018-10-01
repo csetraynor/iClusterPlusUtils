@@ -1,0 +1,400 @@
+srun: error: cnode22: task 0: Exited with exit code 1
+srun: Terminating job step 127673.199
+srun: error: cnode22: task 0: Exited with exit code 1
+srun: Terminating job step 127673.197
+srun: error: cnode22: task 0: Exited with exit code 1
+srun: Terminating job step 127673.198
+srun: error: cnode22: task 0: Exited with exit code 1
+srun: Terminating job step 127673.196
+srun: error: cnode18: task 0: Exited with exit code 1
+srun: Terminating job step 127673.84
+srun: error: cnode15: task 0: Exited with exit code 1
+srun: Terminating job step 127673.16
+srun: error: cnode16: task 0: Exited with exit code 1
+srun: Terminating job step 127673.33
+srun: error: cnode16: task 0: Exited with exit code 1
+srun: Terminating job step 127673.35
+srun: error: cnode16: task 0: Exited with exit code 1
+srun: Terminating job step 127673.44
+srun: error: cnode17: task 0: Exited with exit code 1
+srun: Terminating job step 127673.70
+srun: error: cnode16: task 0: Exited with exit code 1
+srun: Terminating job step 127673.48
+srun: error: cnode20: task 0: Exited with exit code 1
+srun: Terminating job step 127673.163
+srun: error: cnode15: task 0: Exited with exit code 1
+srun: Terminating job step 127673.23
+srun: error: cnode19: task 0: Exited with exit code 1
+srun: Terminating job step 127673.113
+srun: error: cnode21: task 0: Exited with exit code 1
+srun: Terminating job step 127673.178
+srun: error: cnode16: task 0: Exited with exit code 1
+srun: Terminating job step 127673.40
+srun: error: cnode15: task 0: Exited with exit code 1
+srun: Terminating job step 127673.0
+srun: error: cnode17: task 0: Exited with exit code 1
+srun: Terminating job step 127673.74
+srun: error: cnode18: task 0: Exited with exit code 1
+srun: Terminating job step 127673.100
+srun: error: cnode19: task 0: Exited with exit code 1
+srun: Terminating job step 127673.126
+srun: error: cnode17: task 0: Exited with exit code 1
+srun: Terminating job step 127673.75
+srun: error: cnode18: task 0: Exited with exit code 1
+srun: Terminating job step 127673.89
+srun: error: cnode21: task 0: Exited with exit code 1
+srun: Terminating job step 127673.186
+srun: error: cnode17: task 0: Exited with exit code 1
+srun: Terminating job step 127673.65
+srun: error: cnode15: task 0: Exited with exit code 1
+srun: Terminating job step 127673.18
+srun: error: cnode18: task 0: Exited with exit code 1
+srun: Terminating job step 127673.97
+srun: error: cnode18: task 0: Exited with exit code 1
+srun: Terminating job step 127673.101
+srun: error: cnode18: task 0: Exited with exit code 1
+srun: Terminating job step 127673.91
+srun: error: cnode20: task 0: Exited with exit code 1
+srun: Terminating job step 127673.160
+srun: error: cnode17: task 0: Exited with exit code 1
+srun: Terminating job step 127673.77
+srun: error: cnode21: task 0: Exited with exit code 1
+srun: Terminating job step 127673.180
+srun: error: cnode16: task 0: Exited with exit code 1
+srun: Terminating job step 127673.52
+srun: error: cnode20: task 0: Exited with exit code 1
+srun: Terminating job step 127673.152
+srun: error: cnode17: task 0: Exited with exit code 1
+srun: Terminating job step 127673.64
+srun: error: cnode18: task 0: Exited with exit code 1
+srun: Terminating job step 127673.107
+srun: error: cnode20: task 0: Exited with exit code 1
+srun: Terminating job step 127673.144
+srun: error: cnode17: task 0: Exited with exit code 1
+srun: Terminating job step 127673.62
+srun: error: cnode15: task 0: Exited with exit code 1
+srun: Terminating job step 127673.14
+srun: error: cnode21: task 0: Exited with exit code 1
+srun: Terminating job step 127673.176
+srun: error: cnode17: task 0: Exited with exit code 1
+srun: Terminating job step 127673.60
+srun: error: cnode21: task 0: Exited with exit code 1
+srun: Terminating job step 127673.174
+srun: error: cnode20: task 0: Exited with exit code 1
+srun: Terminating job step 127673.145
+srun: error: cnode19: task 0: Exited with exit code 1
+srun: Terminating job step 127673.129
+srun: error: cnode20: task 0: Exited with exit code 1
+srun: Terminating job step 127673.153
+srun: error: cnode18: task 0: Exited with exit code 1
+srun: Terminating job step 127673.103
+srun: error: cnode17: task 0: Exited with exit code 1
+srun: Terminating job step 127673.59
+srun: error: cnode19: task 0: Exited with exit code 1
+srun: Terminating job step 127673.128
+srun: error: cnode18: task 0: Exited with exit code 1
+srun: Terminating job step 127673.111
+srun: error: cnode18: task 0: Exited with exit code 1
+srun: Terminating job step 127673.93
+srun: error: cnode21: task 0: Exited with exit code 1
+srun: Terminating job step 127673.183
+srun: error: cnode21: task 0: Exited with exit code 1
+srun: Terminating job step 127673.182
+srun: error: cnode20: task 0: Exited with exit code 1
+srun: Terminating job step 127673.148
+srun: error: cnode18: task 0: Exited with exit code 1
+srun: Terminating job step 127673.95
+srun: error: cnode21: task 0: Exited with exit code 1
+srun: Terminating job step 127673.193
+srun: error: cnode19: task 0: Exited with exit code 1
+srun: Terminating job step 127673.139
+srun: error: cnode19: task 0: Exited with exit code 1
+srun: Terminating job step 127673.133
+srun: error: cnode21: task 0: Exited with exit code 1
+srun: Terminating job step 127673.168
+srun: error: cnode15: task 0: Exited with exit code 1
+srun: Terminating job step 127673.19
+srun: error: cnode21: task 0: Exited with exit code 1
+srun: Terminating job step 127673.189
+srun: error: cnode16: task 0: Exited with exit code 1
+srun: Terminating job step 127673.51
+srun: error: cnode15: task 0: Exited with exit code 1
+srun: Terminating job step 127673.5
+srun: error: cnode15: task 0: Exited with exit code 1
+srun: Terminating job step 127673.12
+srun: error: cnode15: task 0: Exited with exit code 1
+srun: Terminating job step 127673.20
+srun: error: cnode15: task 0: Exited with exit code 1
+srun: Terminating job step 127673.13
+srun: error: cnode16: task 0: Exited with exit code 1
+srun: Terminating job step 127673.39
+srun: error: cnode18: task 0: Exited with exit code 1
+srun: Terminating job step 127673.92
+srun: error: cnode21: task 0: Exited with exit code 1
+srun: Terminating job step 127673.172
+srun: error: cnode16: task 0: Exited with exit code 1
+srun: Terminating job step 127673.55
+srun: error: cnode15: task 0: Exited with exit code 1
+srun: Terminating job step 127673.24
+srun: error: cnode19: task 0: Exited with exit code 1
+srun: Terminating job step 127673.112
+srun: error: cnode18: task 0: Exited with exit code 1
+srun: Terminating job step 127673.109
+srun: error: cnode16: task 0: Exited with exit code 1
+srun: Terminating job step 127673.34
+srun: error: cnode15: task 0: Exited with exit code 1
+srun: Terminating job step 127673.3
+srun: error: cnode20: task 0: Exited with exit code 1
+srun: Terminating job step 127673.141
+srun: error: cnode21: task 0: Exited with exit code 1
+srun: Terminating job step 127673.187
+srun: error: cnode16: task 0: Exited with exit code 1
+srun: Terminating job step 127673.49
+srun: error: cnode19: task 0: Exited with exit code 1
+srun: Terminating job step 127673.138
+srun: error: cnode15: task 0: Exited with exit code 1
+srun: Terminating job step 127673.4
+srun: error: cnode18: task 0: Exited with exit code 1
+srun: Terminating job step 127673.108
+srun: error: cnode19: task 0: Exited with exit code 1
+srun: Terminating job step 127673.121
+srun: error: cnode21: task 0: Exited with exit code 1
+srun: Terminating job step 127673.185
+srun: error: cnode17: task 0: Exited with exit code 1
+srun: Terminating job step 127673.79
+srun: error: cnode18: task 0: Exited with exit code 1
+srun: Terminating job step 127673.102
+srun: error: cnode17: task 0: Exited with exit code 1
+srun: Terminating job step 127673.81
+srun: error: cnode20: task 0: Exited with exit code 1
+srun: Terminating job step 127673.158
+srun: error: cnode17: task 0: Exited with exit code 1
+srun: Terminating job step 127673.76
+srun: error: cnode19: task 0: Exited with exit code 1
+srun: Terminating job step 127673.124
+srun: error: cnode21: task 0: Exited with exit code 1
+srun: Terminating job step 127673.184
+srun: error: cnode18: task 0: Exited with exit code 1
+srun: Terminating job step 127673.105
+srun: error: cnode20: task 0: Exited with exit code 1
+srun: Terminating job step 127673.157
+srun: error: cnode16: task 0: Exited with exit code 1
+srun: Terminating job step 127673.38
+srun: error: cnode19: task 0: Exited with exit code 1
+srun: Terminating job step 127673.114
+srun: error: cnode15: task 0: Exited with exit code 1
+srun: Terminating job step 127673.22
+srun: error: cnode16: task 0: Exited with exit code 1
+srun: Terminating job step 127673.32
+srun: error: cnode16: task 0: Exited with exit code 1
+srun: Terminating job step 127673.45
+srun: error: cnode16: task 0: Exited with exit code 1
+srun: Terminating job step 127673.46
+srun: error: cnode21: task 0: Exited with exit code 1
+srun: Terminating job step 127673.173
+srun: error: cnode18: task 0: Exited with exit code 1
+srun: Terminating job step 127673.90
+srun: error: cnode16: task 0: Exited with exit code 1
+srun: Terminating job step 127673.37
+srun: error: cnode21: task 0: Exited with exit code 1
+srun: Terminating job step 127673.169
+srun: error: cnode17: task 0: Exited with exit code 1
+srun: Terminating job step 127673.57
+srun: error: cnode19: task 0: Exited with exit code 1
+srun: Terminating job step 127673.123
+srun: error: cnode15: task 0: Exited with exit code 1
+srun: Terminating job step 127673.21
+srun: error: cnode21: task 0: Exited with exit code 1
+srun: Terminating job step 127673.170
+srun: error: cnode18: task 0: Exited with exit code 1
+srun: Terminating job step 127673.104
+srun: error: cnode17: task 0: Exited with exit code 1
+srun: Terminating job step 127673.80
+srun: error: cnode19: task 0: Exited with exit code 1
+srun: Terminating job step 127673.120
+srun: error: cnode18: task 0: Exited with exit code 1
+srun: Terminating job step 127673.88
+srun: error: cnode16: task 0: Exited with exit code 1
+srun: Terminating job step 127673.31
+srun: error: cnode18: task 0: Exited with exit code 1
+srun: Terminating job step 127673.94
+srun: error: cnode19: task 0: Exited with exit code 1
+srun: Terminating job step 127673.132
+srun: error: cnode16: task 0: Exited with exit code 1
+srun: Terminating job step 127673.29
+srun: error: cnode19: task 0: Exited with exit code 1
+srun: Terminating job step 127673.136
+srun: error: cnode15: task 0: Exited with exit code 1
+srun: Terminating job step 127673.6
+srun: error: cnode18: task 0: Exited with exit code 1
+srun: Terminating job step 127673.96
+srun: error: cnode15: task 0: Exited with exit code 1
+srun: Terminating job step 127673.26
+srun: error: cnode16: task 0: Exited with exit code 1
+srun: Terminating job step 127673.43
+srun: error: cnode15: task 0: Exited with exit code 1
+srun: Terminating job step 127673.8
+srun: error: cnode20: task 0: Exited with exit code 1
+srun: Terminating job step 127673.149
+srun: error: cnode17: task 0: Exited with exit code 1
+srun: Terminating job step 127673.72
+srun: error: cnode19: task 0: Exited with exit code 1
+srun: Terminating job step 127673.134
+srun: error: cnode21: task 0: Exited with exit code 1
+srun: Terminating job step 127673.177
+srun: error: cnode18: task 0: Exited with exit code 1
+srun: Terminating job step 127673.87
+srun: error: cnode15: task 0: Exited with exit code 1
+srun: Terminating job step 127673.17
+srun: error: cnode16: task 0: Exited with exit code 1
+srun: Terminating job step 127673.47
+srun: error: cnode15: task 0: Exited with exit code 1
+srun: Terminating job step 127673.15
+srun: error: cnode20: task 0: Exited with exit code 1
+srun: Terminating job step 127673.150
+srun: error: cnode20: task 0: Exited with exit code 1
+srun: Terminating job step 127673.151
+srun: error: cnode16: task 0: Exited with exit code 1
+srun: Terminating job step 127673.30
+srun: error: cnode16: task 0: Exited with exit code 1
+srun: Terminating job step 127673.54
+srun: error: cnode17: task 0: Exited with exit code 1
+srun: Terminating job step 127673.67
+srun: error: cnode17: task 0: Exited with exit code 1
+srun: Terminating job step 127673.82
+srun: error: cnode17: task 0: Exited with exit code 1
+srun: Terminating job step 127673.83
+srun: error: cnode21: task 0: Exited with exit code 1
+srun: Terminating job step 127673.179
+srun: error: cnode15: task 0: Exited with exit code 1
+srun: Terminating job step 127673.11
+srun: error: cnode21: task 0: Exited with exit code 1
+srun: Terminating job step 127673.188
+srun: error: cnode18: task 0: Exited with exit code 1
+srun: Terminating job step 127673.99
+srun: error: cnode15: task 0: Exited with exit code 1
+srun: Terminating job step 127673.27
+srun: error: cnode18: task 0: Exited with exit code 1
+srun: Terminating job step 127673.86
+srun: error: cnode19: task 0: Exited with exit code 1
+srun: Terminating job step 127673.115
+srun: error: cnode20: task 0: Exited with exit code 1
+srun: Terminating job step 127673.147
+srun: error: cnode17: task 0: Exited with exit code 1
+srun: Terminating job step 127673.63
+srun: error: cnode17: task 0: Exited with exit code 1
+srun: Terminating job step 127673.68
+srun: error: cnode16: task 0: Exited with exit code 1
+srun: Terminating job step 127673.28
+srun: error: cnode19: task 0: Exited with exit code 1
+srun: Terminating job step 127673.127
+srun: error: cnode20: task 0: Exited with exit code 1
+srun: Terminating job step 127673.161
+srun: error: cnode16: task 0: Exited with exit code 1
+srun: Terminating job step 127673.36
+srun: error: cnode21: task 0: Exited with exit code 1
+srun: Terminating job step 127673.192
+srun: error: cnode17: task 0: Exited with exit code 1
+srun: Terminating job step 127673.66
+srun: error: cnode17: task 0: Exited with exit code 1
+srun: Terminating job step 127673.61
+srun: error: cnode21: task 0: Exited with exit code 1
+srun: Terminating job step 127673.171
+srun: error: cnode15: task 0: Exited with exit code 1
+srun: Terminating job step 127673.25
+srun: error: cnode19: task 0: Exited with exit code 1
+srun: Terminating job step 127673.135
+srun: error: cnode18: task 0: Exited with exit code 1
+srun: Terminating job step 127673.85
+srun: error: cnode19: task 0: Exited with exit code 1
+srun: Terminating job step 127673.131
+srun: error: cnode21: task 0: Exited with exit code 1
+srun: Terminating job step 127673.190
+srun: error: cnode19: task 0: Exited with exit code 1
+srun: Terminating job step 127673.130
+srun: error: cnode19: task 0: Exited with exit code 1
+srun: Terminating job step 127673.118
+srun: error: cnode20: task 0: Exited with exit code 1
+srun: Terminating job step 127673.162
+srun: error: cnode20: task 0: Exited with exit code 1
+srun: Terminating job step 127673.166
+srun: error: cnode15: task 0: Exited with exit code 1
+srun: Terminating job step 127673.9
+srun: error: cnode15: task 0: Exited with exit code 1
+srun: Terminating job step 127673.2
+srun: error: cnode20: task 0: Exited with exit code 1
+srun: Terminating job step 127673.167
+srun: error: cnode15: task 0: Exited with exit code 1
+srun: Terminating job step 127673.1
+srun: error: cnode21: task 0: Exited with exit code 1
+srun: Terminating job step 127673.181
+srun: error: cnode15: task 0: Exited with exit code 1
+srun: Terminating job step 127673.7
+srun: error: cnode20: task 0: Exited with exit code 1
+srun: Terminating job step 127673.142
+srun: error: cnode17: task 0: Exited with exit code 1
+srun: Terminating job step 127673.71
+srun: error: cnode17: task 0: Exited with exit code 1
+srun: Terminating job step 127673.69
+srun: error: cnode20: task 0: Exited with exit code 1
+srun: Terminating job step 127673.146
+srun: error: cnode20: task 0: Exited with exit code 1
+srun: Terminating job step 127673.143
+srun: error: cnode16: task 0: Exited with exit code 1
+srun: Terminating job step 127673.53
+srun: error: cnode21: task 0: Exited with exit code 1
+srun: Terminating job step 127673.175
+srun: error: cnode17: task 0: Exited with exit code 1
+srun: Terminating job step 127673.78
+srun: error: cnode17: task 0: Exited with exit code 1
+srun: Terminating job step 127673.58
+srun: error: cnode15: task 0: Exited with exit code 1
+srun: Terminating job step 127673.10
+srun: error: cnode16: task 0: Exited with exit code 1
+srun: Terminating job step 127673.41
+srun: error: cnode21: task 0: Exited with exit code 1
+srun: Terminating job step 127673.195
+srun: error: cnode21: task 0: Exited with exit code 1
+srun: Terminating job step 127673.194
+srun: error: cnode19: task 0: Exited with exit code 1
+srun: Terminating job step 127673.137
+srun: error: cnode18: task 0: Exited with exit code 1
+srun: Terminating job step 127673.106
+srun: error: cnode19: task 0: Exited with exit code 1
+srun: Terminating job step 127673.122
+srun: error: cnode20: task 0: Exited with exit code 1
+srun: Terminating job step 127673.164
+srun: error: cnode20: task 0: Exited with exit code 1
+srun: Terminating job step 127673.154
+srun: error: cnode18: task 0: Exited with exit code 1
+srun: Terminating job step 127673.98
+srun: error: cnode19: task 0: Exited with exit code 1
+srun: Terminating job step 127673.119
+srun: error: cnode19: task 0: Exited with exit code 1
+srun: Terminating job step 127673.117
+srun: error: cnode16: task 0: Exited with exit code 1
+srun: Terminating job step 127673.42
+srun: error: cnode16: task 0: Exited with exit code 1
+srun: Terminating job step 127673.50
+srun: error: cnode19: task 0: Exited with exit code 1
+srun: Terminating job step 127673.116
+srun: error: cnode18: task 0: Exited with exit code 1
+srun: Terminating job step 127673.110
+srun: error: cnode19: task 0: Exited with exit code 1
+srun: Terminating job step 127673.125
+srun: error: cnode21: task 0: Exited with exit code 1
+srun: Terminating job step 127673.191
+srun: error: cnode20: task 0: Exited with exit code 1
+srun: Terminating job step 127673.140
+srun: error: cnode20: task 0: Exited with exit code 1
+srun: Terminating job step 127673.159
+srun: error: cnode17: task 0: Exited with exit code 1
+srun: Terminating job step 127673.73
+srun: error: cnode20: task 0: Exited with exit code 1
+srun: Terminating job step 127673.165
+srun: error: cnode17: task 0: Exited with exit code 1
+srun: Terminating job step 127673.56
+srun: error: cnode20: task 0: Exited with exit code 1
+srun: Terminating job step 127673.155
+srun: error: cnode20: task 0: Exited with exit code 1
+srun: Terminating job step 127673.156

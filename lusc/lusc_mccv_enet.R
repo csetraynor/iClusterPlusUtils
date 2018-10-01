@@ -10,7 +10,6 @@ library(survival)
 library(survcomp)
 # For MC-crossvalidations
 suppressMessages(library(rsample))
-suppressMessages(library(tidyposterior))
 
 #Read arguments listed on command line
 args = (commandArgs(TRUE))
@@ -113,12 +112,10 @@ cox_rp_train = as.matrix(x_clinical) %*% as.vector(unlist(coef(cox.train)))
 
 # calculate metrics
 get_survmetrics <- function(train, test = NULL, cox_rp,  cox_rp_train = NULL){
-  
   if(is.null(test)){
     test <- train
     cox_rp_train <-  cox_rp
   }
-  
   ## Prepare to calculate metrics
   ws <- rep(1, length(test$time))
   ws[test$time > max(test$time[test$status] ) ] <- 0.01
@@ -128,12 +125,15 @@ get_survmetrics <- function(train, test = NULL, cox_rp,  cox_rp_train = NULL){
   Cindex.cox <- survcomp::concordance.index(x = cox_rp, surv.time = test$time, surv.event = test$status, method = "conservative",  na.rm=TRUE, weights = ws)$c.index
   
   #brier score
-  bs.cox <- survcomp::sbrier.score2proba(data.tr = data.frame(time = train$time, event = train$status, score = cox_rp_train), data.ts = data.frame(time = test$time, event = test$status, score = cox_rp), method = c("cox"))
+  bs.cox <- survcomp::sbrier.score2proba(data.tr = data.frame(time = train$time, event = train$status, score = cox_rp_train), data.ts = data.frame(time = test$time, event = test$status, score = cox_rp), method = c("prodlim"))
+  
+  #dindex
+  D.cox <- survcomp::D.index(x = cox_rp, surv.time = test$time, surv.event = test$status, weights = ws)
   
   #AUC ROC
-  AUC.cox <- survcomp::tdrocc(x = as.vector(cox_rp) , surv.time = test$time, surv.event = test$status,  time = max(obs.test.time) )
+  AUC.cox <- survcomp::tdrocc(x = as.vector(cox_rp) , surv.time = test$time, surv.event = test$status,  time = quantile(obs.test.time, .5) )
   
-  list("Cindex.cox" = Cindex.cox,  "bs.cox" = bs.cox, "AUC.cox" = AUC.cox)
+  list("Cindex.cox" = Cindex.cox,  "bs.cox" = bs.cox, "AUC.cox" = AUC.cox, "D.cox" = D.cox) 
 }
 
 metrics_list <- get_survmetrics(train = train, test = test, cox_rp = cox_rp, 
@@ -223,4 +223,4 @@ metrics_test <- data.frame(models = models, cindex = cindex, bs = bs,
                            auc = auc)
 
 
-saveRDS(metrics, paste0("~/iClusterPlusUtils/lusc/results/metrics_cluster", i, ".RDS") )
+saveRDS(metrics_test, paste0("~/iClusterPlusUtils/lusc/results/metrics_enet", i, ".RDS") )

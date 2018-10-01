@@ -1,0 +1,26 @@
+Seq	Host	Starttime	JobRuntime	Send	Receive	Exitval	Signal	Command
+14	:	1538271146.731	 36291.835	0	0	0	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 14' lusc_mccv_clust8.R
+24	:	1538271148.883	 36321.017	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 24' lusc_mccv_clust8.R
+22	:	1538271148.464	 36339.815	0	0	0	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 22' lusc_mccv_clust8.R
+8	:	1538271145.423	 36344.631	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 8' lusc_mccv_clust8.R
+20	:	1538271148.024	 36347.982	0	0	0	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 20' lusc_mccv_clust8.R
+10	:	1538271145.833	 36367.740	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 10' lusc_mccv_clust8.R
+4	:	1538271144.539	 36371.276	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 4' lusc_mccv_clust8.R
+18	:	1538271147.603	 36373.857	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 18' lusc_mccv_clust8.R
+12	:	1538271146.283	 36379.066	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 12' lusc_mccv_clust8.R
+6	:	1538271144.970	 36403.601	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 6' lusc_mccv_clust8.R
+17	:	1538271147.363	 36427.346	0	0	0	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 17' lusc_mccv_clust8.R
+15	:	1538271146.947	 36428.865	0	0	0	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 15' lusc_mccv_clust8.R
+13	:	1538271146.489	 36431.077	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 13' lusc_mccv_clust8.R
+2	:	1538271144.116	 36436.598	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 2' lusc_mccv_clust8.R
+11	:	1538271146.071	 36450.118	0	0	0	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 11' lusc_mccv_clust8.R
+23	:	1538271148.676	 36503.650	0	0	0	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 23' lusc_mccv_clust8.R
+9	:	1538271145.630	 36519.958	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 9' lusc_mccv_clust8.R
+16	:	1538271147.158	 36523.322	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 16' lusc_mccv_clust8.R
+19	:	1538271147.816	 36539.154	0	0	0	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 19' lusc_mccv_clust8.R
+1	:	1538271143.914	 36547.443	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 1' lusc_mccv_clust8.R
+7	:	1538271145.210	 36567.049	0	0	0	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 7' lusc_mccv_clust8.R
+21	:	1538271148.227	 36570.729	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 21' lusc_mccv_clust8.R
+3	:	1538271144.328	 36602.784	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 3' lusc_mccv_clust8.R
+25	:	1538271149.125	 36621.691	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 25' lusc_mccv_clust8.R
+5	:	1538271144.747	 36646.022	0	0	0	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 5' lusc_mccv_clust8.R

@@ -1,0 +1,26 @@
+Seq	Host	Starttime	JobRuntime	Send	Receive	Exitval	Signal	Command
+1	:	1538237774.049	     2.596	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 1' coad_mccv_clust.R
+2	:	1538237774.269	     2.667	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 2' coad_mccv_clust.R
+3	:	1538237774.470	     2.727	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 3' coad_mccv_clust.R
+4	:	1538237774.681	     2.756	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 4' coad_mccv_clust.R
+5	:	1538237774.890	     2.815	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 5' coad_mccv_clust.R
+6	:	1538237775.114	     2.812	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 6' coad_mccv_clust.R
+7	:	1538237775.354	     2.844	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 7' coad_mccv_clust.R
+8	:	1538237775.567	     2.851	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 8' coad_mccv_clust.R
+9	:	1538237775.775	     2.866	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 9' coad_mccv_clust.R
+10	:	1538237775.980	     2.869	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 10' coad_mccv_clust.R
+11	:	1538237776.217	     2.855	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 11' coad_mccv_clust.R
+12	:	1538237776.429	     2.872	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 12' coad_mccv_clust.R
+13	:	1538237776.635	     2.884	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 13' coad_mccv_clust.R
+14	:	1538237776.863	     2.887	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 14' coad_mccv_clust.R
+15	:	1538237777.078	     2.883	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 15' coad_mccv_clust.R
+16	:	1538237777.298	     2.871	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 16' coad_mccv_clust.R
+17	:	1538237777.501	     2.880	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 17' coad_mccv_clust.R
+18	:	1538237777.706	     2.871	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 18' coad_mccv_clust.R
+19	:	1538237777.921	     2.871	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 19' coad_mccv_clust.R
+20	:	1538237778.124	     2.858	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 20' coad_mccv_clust.R
+21	:	1538237778.328	     2.820	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 21' coad_mccv_clust.R
+22	:	1538237778.541	     2.822	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 22' coad_mccv_clust.R
+23	:	1538237778.749	     2.763	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 23' coad_mccv_clust.R
+24	:	1538237778.951	     2.758	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 24' coad_mccv_clust.R
+25	:	1538237779.167	     2.671	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 25' coad_mccv_clust.R

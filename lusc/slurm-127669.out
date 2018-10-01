@@ -1,0 +1,25 @@
+srun: error: SLURM job 127669 has expired.
+srun: Check SLURM_JOB_ID environment variable for expired or invalid job.
+slurmstepd: error: *** JOB 127669 ON cnode23 CANCELLED AT 2018-09-30T22:16:46 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 127669.0 ON cnode23 CANCELLED AT 2018-09-30T22:16:46 ***
+srun: error: cnode23: task 0: Terminated
+srun: Terminating job step 127669.0
+srun: error: SLURM job 127669 has expired.
+srun: Check SLURM_JOB_ID environment variable for expired or invalid job.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 127669.8 ON cnode23 CANCELLED AT 2018-09-30T22:16:46 ***
+srun: error: cnode23: task 0: Terminated
+srun: Terminating job step 127669.8
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 127669.5 ON cnode23 CANCELLED AT 2018-09-30T22:16:46 ***
+srun: error: cnode23: task 0: Terminated
+srun: Terminating job step 127669.5
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 127669.3 ON cnode23 CANCELLED AT 2018-09-30T22:16:46 ***
+srun: error: cnode23: task 0: Terminated
+srun: Terminating job step 127669.3
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 127669.2 ON cnode23 CANCELLED AT 2018-09-30T22:16:46 ***
+srun: error: cnode23: task 0: Terminated
+srun: Terminating job step 127669.2

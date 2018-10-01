@@ -1,0 +1,26 @@
+Seq	Host	Starttime	JobRuntime	Send	Receive	Exitval	Signal	Command
+1	:	1538272030.496	     2.598	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 1' coad_mccv_enet.R
+2	:	1538272030.697	     2.634	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 2' coad_mccv_enet.R
+3	:	1538272030.909	     2.716	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 3' coad_mccv_enet.R
+4	:	1538272031.120	     2.724	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 4' coad_mccv_enet.R
+5	:	1538272031.329	     2.808	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 5' coad_mccv_enet.R
+6	:	1538272031.553	     2.795	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 6' coad_mccv_enet.R
+7	:	1538272031.793	     2.826	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 7' coad_mccv_enet.R
+8	:	1538272032.006	     2.823	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 8' coad_mccv_enet.R
+9	:	1538272032.214	     2.847	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 9' coad_mccv_enet.R
+10	:	1538272032.417	     2.852	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 10' coad_mccv_enet.R
+11	:	1538272032.655	     2.845	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 11' coad_mccv_enet.R
+12	:	1538272032.867	     2.824	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 12' coad_mccv_enet.R
+13	:	1538272033.073	     2.850	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 13' coad_mccv_enet.R
+14	:	1538272033.301	     2.849	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 14' coad_mccv_enet.R
+15	:	1538272033.521	     2.865	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 15' coad_mccv_enet.R
+16	:	1538272033.725	     2.865	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 16' coad_mccv_enet.R
+17	:	1538272033.940	     2.845	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 17' coad_mccv_enet.R
+18	:	1538272034.154	     2.845	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 18' coad_mccv_enet.R
+19	:	1538272034.365	     2.835	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 19' coad_mccv_enet.R
+20	:	1538272034.590	     2.820	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 20' coad_mccv_enet.R
+21	:	1538272034.792	     2.813	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 21' coad_mccv_enet.R
+22	:	1538272034.994	     2.831	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 22' coad_mccv_enet.R
+23	:	1538272035.208	     2.776	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 23' coad_mccv_enet.R
+24	:	1538272035.424	     2.744	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 24' coad_mccv_enet.R
+25	:	1538272035.628	     2.703	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 25' coad_mccv_enet.R

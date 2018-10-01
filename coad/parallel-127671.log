@@ -1,0 +1,6 @@
+Seq	Host	Starttime	JobRuntime	Send	Receive	Exitval	Signal	Command
+54	:	1538342307.179	     0.213	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 54' coad_mccv_clust.R
+55	:	1538342307.392	     0.144	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 55' coad_mccv_clust.R
+56	:	1538342307.598	     0.092	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 56' coad_mccv_clust.R
+57	:	1538342307.813	     0.026	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 57' coad_mccv_clust.R
+58	:	1538342308.031	     0.019	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args 58' coad_mccv_clust.R

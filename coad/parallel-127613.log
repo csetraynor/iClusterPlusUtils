@@ -1,0 +1,2 @@
+Seq	Host	Starttime	JobRuntime	Send	Receive	Exitval	Signal	Command
+1	:	1538303750.542	     7.287	0	0	1	0	srun -N 1 -n 1 --exclusive R CMD BATCH '--args \{2\}' coad_mccv_clust.R

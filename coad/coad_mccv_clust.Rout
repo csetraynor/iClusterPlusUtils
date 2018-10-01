@@ -1,0 +1,108 @@
+
+R version 3.4.4 (2018-03-15) -- "Someone to Lean On"
+Copyright (C) 2018 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+> #mc-cross-validation.R
+> # Load libraries
+> suppressMessages(library(dplyr))
+> # For glmnet
+> suppressMessages(library(glmnet))
+> suppressMessages(library(glmnetUtils))
+> # For iCluster
+> library(iClusterPlus)
+Loading required package: parallel
+> library(gplots)
+
+Attaching package: ‘gplots’
+
+The following object is masked from ‘package:stats’:
+
+    lowess
+
+> library(lattice)
+> # For survival analysis
+> library(survival)
+> library(survcomp)
+Loading required package: prodlim
+> # For MC-crossvalidations
+> suppressMessages(library(rsample))
+> # for this package
+> #Read arguments listed on command line
+> args = (commandArgs(TRUE))
+> i = as.integer(args[1]) 
+> print(i)
+[1] 42
+> set.seed(69837693)
+> 
+> # get clinical data -----
+> coad_mccv <- readRDS("~/iClusterPlusUtils/data/mc_coad_clinical.RDS")
+> vfold <- coad_mccv$splits[[i]] #choose splits
+> train_id <- vfold$in_id
+> patient_id <- vfold$data$patient_id
+> ## Load genomic datasets
+> gene = readRDS("~/iClusterPlus/coad_results/gene_coad.RDS")
+> seg.cn = readRDS("~/iClusterPlus/coad_results/seg.cn_coad.RDS")
+> meth450 = readRDS("~/iClusterPlus/coad_results/meth450.RDS")
+> sample = readRDS("~/iClusterPlus/coad_results/sample_coad.RDS")
+> sample <- sample[!duplicated(sample$patient_id), ]
+> sample <- sample[sample$patient_id %in% patient_id, ]
+> prot = readRDS("~/iClusterPlus/coad_results/prot.RDS")
+> ## Get common sample id
+> sample_id <- list( meth450$sample_id, rownames(seg.cn), sample$sample_id, prot$sample_id, gene$sample_id)
+> sample_id <- Reduce(intersect, sample_id)
+> ## Filter
+> filter_sample_id <- function(s, m){
++   m[rownames(m) %in% s, ]
++ }
+> ## Filter
+> gene$matrix <- filter_sample_id(s = sample_id, m = gene$matrix)
+> meth450$matrix <- filter_sample_id(s = sample_id, m = meth450$matrix)
+> seg.cn <- filter_sample_id(s = sample_id, m = seg.cn)
+> prot$matrix <- filter_sample_id(s = sample_id, m = prot$matrix )
+> sample <- sample[sample$sample_id %in% sample_id, ]
+> sample <- sample[order(sample$sample_id), ]
+> require(assertthat)
+Loading required package: assertthat
+> assert_that(all(rownames(meth450$matrix) == rownames(seg.cn)))
+[1] TRUE
+> assert_that(all(rownames(gene$matrix) == rownames(seg.cn)))
+[1] TRUE
+> assert_that(all(rownames(prot$matrix) == rownames(seg.cn)))
+[1] TRUE
+> 
+> date()
+[1] "Sun Sep 30 22:18:27 2018"
+> ### --- Conduct integrative Clustering
+> set.seed(321)
+> model.tuned <- iClusterPlus::tune.iClusterBayes(cpus = 8,
++                                                 dt1 = gene$matrix[train_id, ],
++                                                 dt2 = seg.cn[train_id, ],
++                                                 dt3 = meth450$matrix[train_id, ],
++                                                 dt4 = prot$matrix[train_id, ],
++                                                 type = c("gaussian","gaussian", "gaussian", "gaussian"),
++                                                 K= 1:8,
++                                                 n.burnin=10000,
++                                                 n.draw=12000,
++                                                 prior.gamma = rep(0.1, 6),
++                                                 sdev = 0.5,
++                                                 beta.var.scale = 1,
++                                                 thin = 1,
++                                                 pp.cutoff = 0.5)
+Begin parallel computation

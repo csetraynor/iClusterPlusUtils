@@ -1,0 +1,45 @@
+srun: error: cnode60: task 0: Exited with exit code 1
+srun: Terminating job step 127587.2
+srun: error: cnode60: task 0: Exited with exit code 1
+srun: Terminating job step 127587.4
+srun: error: cnode60: task 0: Exited with exit code 1
+srun: Terminating job step 127587.7
+srun: error: cnode60: task 0: Exited with exit code 1
+srun: Terminating job step 127587.5
+srun: error: cnode60: task 0: Exited with exit code 1
+srun: Terminating job step 127587.9
+srun: error: cnode60: task 0: Exited with exit code 1
+srun: Terminating job step 127587.3
+srun: error: cnode60: task 0: Exited with exit code 1
+srun: Terminating job step 127587.1
+srun: error: cnode60: task 0: Exited with exit code 1
+srun: Terminating job step 127587.6
+srun: error: cnode60: task 0: Exited with exit code 1
+srun: Terminating job step 127587.15
+srun: error: cnode60: task 0: Exited with exit code 1
+srun: Terminating job step 127587.10
+srun: error: cnode60: task 0: Exited with exit code 1
+srun: Terminating job step 127587.12
+srun: error: cnode60: task 0: Exited with exit code 1
+srun: Terminating job step 127587.13
+srun: error: cnode60: task 0: Exited with exit code 1
+srun: Terminating job step 127587.0
+srun: error: cnode60: task 0: Exited with exit code 1
+srun: Terminating job step 127587.11
+srun: error: cnode60: task 0: Exited with exit code 1
+srun: Terminating job step 127587.8
+srun: error: cnode60: task 0: Exited with exit code 1
+srun: Terminating job step 127587.14
+slurmstepd: error: *** JOB 127587 ON cnode60 CANCELLED AT 2018-09-29T19:04:44 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 127587.19 ON cnode60 CANCELLED AT 2018-09-29T19:04:44 ***
+srun: error: cnode60: task 0: Terminated
+srun: Terminating job step 127587.19
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 127587.24 ON cnode60 CANCELLED AT 2018-09-29T19:04:44 ***
+srun: error: cnode60: task 0: Terminated
+srun: Terminating job step 127587.24
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 127587.20 ON cnode60 CANCELLED AT 2018-09-29T19:04:44 ***
+srun: error: cnode60: task 0: Terminated
+srun: Terminating job step 127587.20

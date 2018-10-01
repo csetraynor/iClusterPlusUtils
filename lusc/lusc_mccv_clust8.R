@@ -6,7 +6,6 @@ suppressMessages(library(glmnet))
 suppressMessages(library(glmnetUtils))
 # For iCluster
 library(iClusterPlus)
-library(GenomicRanges)
 library(gplots)
 library(lattice)
 # For survival analysis
@@ -14,7 +13,6 @@ library(survival)
 library(survcomp)
 # For MC-crossvalidations
 suppressMessages(library(rsample))
-suppressMessages(library(tidyposterior))
 # for this package
 #Read arguments listed on command line
 args = (commandArgs(TRUE))
@@ -60,8 +58,8 @@ model.tuned <- iClusterPlus::tune.iClusterBayes(cpus = 8,
                                                 dt3 = meth450$matrix[train_id, ],
                                                 type = c("gaussian","gaussian", "gaussian"),
                                                 K= 1:8,
-                                                n.burnin=1000,
-                                                n.draw=1200,
+                                                n.burnin=10000,
+                                                n.draw=12000,
                                                 prior.gamma = rep(0.1, 6),
                                                 sdev = 0.5,
                                                 beta.var.scale = 1,

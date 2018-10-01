@@ -1,5 +1,5 @@
 
-R version 3.5.1 (2018-07-02) -- "Feather Spray"
+R version 3.4.4 (2018-03-15) -- "Someone to Lean On"
 Copyright (C) 2018 The R Foundation for Statistical Computing
 Platform: x86_64-pc-linux-gnu (64-bit)
 
@@ -17,14 +17,7 @@ Type 'demo()' for some demos, 'help()' for on-line help, or
 'help.start()' for an HTML browser interface to help.
 Type 'q()' to quit R.
 
-Microsoft R Open 3.5.1
-The enhanced R distribution from Microsoft
-Microsoft packages Copyright (C) 2018 Microsoft Corporation
-
-Using the Intel MKL for parallel mathematical computing (using 25 cores).
-
-Default CRAN mirror snapshot taken on 2018-08-01.
-See: https://mran.microsoft.com/.
+[Previously saved workspace restored]
 
 > #mc-cross-validation.R
 > # Load libraries
@@ -39,13 +32,12 @@ See: https://mran.microsoft.com/.
 Loading required package: prodlim
 > # For MC-crossvalidations
 > suppressMessages(library(rsample))
-> suppressMessages(library(tidyposterior))
 > 
 > #Read arguments listed on command line
 > args = (commandArgs(TRUE))
 > i = as.integer(args[1]) 
 > print(i)
-[1] 13
+[1] 200
 > set.seed(69837693)
 > 
 > ## Load genomic datasets
@@ -146,12 +138,10 @@ Loading required package: assertthat
 > 
 > # calculate metrics
 > get_survmetrics <- function(train, test = NULL, cox_rp,  cox_rp_train = NULL){
-+   
 +   if(is.null(test)){
 +     test <- train
 +     cox_rp_train <-  cox_rp
 +   }
-+   
 +   ## Prepare to calculate metrics
 +   ws <- rep(1, length(test$time))
 +   ws[test$time > max(test$time[test$status] ) ] <- 0.01
@@ -161,12 +151,15 @@ Loading required package: assertthat
 +   Cindex.cox <- survcomp::concordance.index(x = cox_rp, surv.time = test$time, surv.event = test$status, method = "conservative",  na.rm=TRUE, weights = ws)$c.index
 +   
 +   #brier score
-+   bs.cox <- survcomp::sbrier.score2proba(data.tr = data.frame(time = train$time, event = train$status, score = cox_rp_train), data.ts = data.frame(time = test$time, event = test$status, score = cox_rp), method = c("cox"))
++   bs.cox <- survcomp::sbrier.score2proba(data.tr = data.frame(time = train$time, event = train$status, score = cox_rp_train), data.ts = data.frame(time = test$time, event = test$status, score = cox_rp), method = c("prodlim"))
++   
++   #dindex
++   D.cox <- survcomp::D.index(x = cox_rp, surv.time = test$time, surv.event = test$status, weights = ws)
 +   
 +   #AUC ROC
-+   AUC.cox <- survcomp::tdrocc(x = as.vector(cox_rp) , surv.time = test$time, surv.event = test$status,  time = max(obs.test.time) )
++   AUC.cox <- survcomp::tdrocc(x = as.vector(cox_rp) , surv.time = test$time, surv.event = test$status,  time = quantile(obs.test.time, .5) )
 +   
-+   list("Cindex.cox" = Cindex.cox,  "bs.cox" = bs.cox, "AUC.cox" = AUC.cox)
++   list("Cindex.cox" = Cindex.cox,  "bs.cox" = bs.cox, "AUC.cox" = AUC.cox, "D.cox" = D.cox) 
 + }
 > 
 > metrics_list <- get_survmetrics(train = train, test = test, cox_rp = cox_rp, 
@@ -195,8 +188,7 @@ Loading required package: assertthat
 > foldid <- caret::createFolds(in_data$status, k = 10, list = FALSE)
 > ## do crossvalidation to find optimal alpha and lambda
 > elasticnet_stuff <- cva.glmnet(x, y, family = "cox", 
-+                                grouped = TRUE, foldid = foldid, parallel = FALSE)
-> # calculate prognostic index
++                                grouped = TRUE, foldid = foldid, parallel = FALSE>>> # calculate prognostic index
 > cvm <- sapply(elasticnet_stuff$modlist, function(i) min(i$cvm))
 > elasticnet <- elasticnet_stuff$modlist[[match(min(cvm), cvm)]]
 > lam <- match(min(cvm), elasticnet$cvm)
@@ -209,6 +201,8 @@ Loading required package: assertthat
 > #-------------------
 > metrics_list <- get_survmetrics(train = train, test = test, cox_rp = enet_rp, 
 +                                 cox_rp_train = enet_rp_train)
+Warning message:
+In min(diff(ux)) : no non-missing arguments to min; returning Inf
 > models <- c(models, "Cox's-enet-genomic")
 > cindex <- c(cindex, metrics_list[["Cindex.cox"]])
 > bs <- c(bs, metrics_list[["bs.cox"]]$bsc.integrated)
@@ -233,4 +227,44 @@ Loading required package: assertthat
 > pf[match(colnames(x_clinical), colnames(x))] <- 0  #clinico-genomic assumption
 > # do crossvalidation to find optimal alpha and lambda
 > elasticnet_stuff <- cva.glmnet(as.matrix(x), as.matrix(y), family = "cox", 
-+                                grouped = TRUE, foldid = foldid, parallel = FALSE, penalty.factor = pf)
++                   >> ## 
+> cvm <- sapply(elasticnet_stuff$modlist, function(i) min(i$cvm))
+> elasticnet> ## 
+> cvm <- sapply(elasticnet_stuff$modlist, function(i) min(i$cvm))
+> elasticnet <- elasticnet_stuff$modlist[[match(min(cvm), cvm)]]
+> lam <- match(min(cvm), elasticnet$cvm)
+> ## calculate risk score
+> enet_rp_train <- as.matrix(x) %*% as.vector(coef(elasticnet$glmnet.fit)[, 
++                                                                         lam])
+> enet_rp <- as.matrix(x_test) %*% as.vector(coef(elasticnet$glmnet.fit)[, 
++                                                                        lam])
+> in_data_test <- cbind(y_test, x_test)
+> metrics_list <- get_survmetrics(train = in_data, test = in_data_test, 
++                             cox_rp = enet_rp,
++                             cox_rp_train = enet_rp_train)
+> #-------------------
+> models <- c(models, "Cox's elastic net: clinico-genomic")
+> cindex <- c(cindex, metrics_list[["Cindex.cox"]])
+> bs <- c(bs, metrics_list[["bs.cox"]]$bsc.integrated)
+> auc <- c(auc, metrics_list[["AUC.cox"]]$AUC)
+> metrics_test <- data.frame(models = models, cindex = cindex, bs = bs, 
++                            auc = auc)
+> 
+> 
+> saveRDS(metrics_test, paste0("~/iClusterPlusUtils/lusc/results/metrics_enet", i, ".RDS") )
+> 
+> proc.time()
+    user   system  elapsed 
+1700.603    1.667 1703.089 
+"bs.cox"]]$bsc.integrated)
+> auc <- c(auc, metrics_list[["AUC.cox"]]$AUC)
+> metrics_test <- data.frame(models = models, cindex = cindex, bs = bs, 
++                            auc = auc)
+> 
+> 
+> saveRDS(metrics_test, paste0("~/iClusterPlusUtils/lusc/results/metrics_enet", i, ".RDS") )
+> 
+> proc.time()
+    user   system  elapsed 
+1687.717    1.681 1689.965 
+

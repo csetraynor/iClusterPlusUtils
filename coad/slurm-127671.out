@@ -1,0 +1,11 @@
+srun: error: SLURM job 127671 has expired.
+srun: Check SLURM_JOB_ID environment variable for expired or invalid job.
+srun: error: SLURM job 127671 has expired.
+srun: Check SLURM_JOB_ID environment variable for expired or invalid job.
+slurmstepd: error: *** JOB 127671 ON cnode15 CANCELLED AT 2018-09-30T22:18:27 ***
+srun: error: SLURM job 127671 has expired.
+srun: Check SLURM_JOB_ID environment variable for expired or invalid job.
+srun: error: SLURM job 127671 has expired.
+srun: Check SLURM_JOB_ID environment variable for expired or invalid job.
+srun: error: SLURM job 127671 has expired.
+srun: Check SLURM_JOB_ID environment variable for expired or invalid job.
